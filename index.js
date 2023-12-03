@@ -16,7 +16,7 @@ function start() {
     sa.play();
 
     setTimeout(() => {
-        body.classList.add('change-bg');
+        body.classList.add('remove-bg');
         h1.classList.add('hide');
         startBtn.classList.add('hide');
     }, 500);
@@ -64,7 +64,7 @@ function main() {
 
     // show the restart button
     setTimeout(() => {
-        body.classList.remove('change-bg');
+        body.classList.remove('remove-bg');
         h1.classList.remove('hide');
         h1.classList.add('fadeIn');
         
