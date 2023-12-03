@@ -18,16 +18,28 @@ body {
     text-align: center;
 }
 
-body.bg {
+body.add-bg {
     background: url('./assets/bg.png') no-repeat center;
     background-size: cover;
+    animation: addBg 3s linear forwards;
 }
 
-body.change-bg {
-    animation: changeBg 4s linear forwards;
+@keyframes addBg {
+    from {
+        background: #121212;
+    }
+
+    to {
+        background: url('./assets/bg.png') no-repeat center;
+        background-size: cover;
+    }
 }
 
-@keyframes changeBg {
+body.remove-bg {
+    animation: removeBg 4s linear forwards;
+}
+
+@keyframes removeBg {
     from {
         background: url('./assets/bg.png') no-repeat center;
         background-size: cover;
@@ -35,7 +47,6 @@ body.change-bg {
 
     to {
         background: #121212;
-        background-position: top;
     }
 }
 
@@ -355,7 +366,11 @@ span {
     }
 
     97% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%);
+    }
+
+    99% {
+        transform: translate(-50%, -130%) scale(1);
     }
 
     100% {
