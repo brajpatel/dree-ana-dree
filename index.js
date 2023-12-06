@@ -23,6 +23,9 @@ function start() {
     
     // start animation
     setTimeout(() => {
+        body.classList.remove('start-bg');
+        body.classList.remove('animate-body-start');
+
         main();
     }, 5000);
 }
@@ -65,11 +68,14 @@ function main() {
     // show the restart button
     setTimeout(() => {
         body.classList.remove('remove-bg');
+        body.classList.add('end-bg');
+        body.classList.add('animate-body-end');
+
         h1.classList.remove('hide');
         h1.classList.add('fadeIn');
         
         restartBtn.style.display = 'flex';
-        restart.classList.add('fadeIn')
+        restart.classList.add('fadeIn');
     }, 21000);
 }
 
