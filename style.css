@@ -16,21 +16,45 @@ body {
     align-items: center;
     gap: 1.5rem;
     text-align: center;
+    overflow: hidden;
 }
 
-body.add-bg {
-    background: url('./assets/bg.png') no-repeat center;
+body.start-bg {
+    background: url('./assets/start-bg.jpg') no-repeat center;
     background-size: cover;
-    animation: addBg 3s linear forwards;
 }
 
-@keyframes addBg {
+body.end-bg {
+    background: url('./assets/end-bg.png') no-repeat center;
+    background-size: cover;
+}
+
+body.animate-body-start {
+    animation: addStartBg 3s linear forwards;
+}
+
+@keyframes addStartBg {
     from {
         background: #121212;
     }
 
     to {
-        background: url('./assets/bg.png') no-repeat center;
+        background: url('./assets/start-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+body.animate-body-end {
+    animation: addEndBg 3s linear forwards;
+}
+
+@keyframes addEndBg {
+    from {
+        background: #121212;
+    }
+
+    to {
+        background: url('./assets/end-bg.png') no-repeat center;
         background-size: cover;
     }
 }
@@ -41,7 +65,7 @@ body.remove-bg {
 
 @keyframes removeBg {
     from {
-        background: url('./assets/bg.png') no-repeat center;
+        background: url('./assets/start-bg.jpg') no-repeat center;
         background-size: cover;
     }
 
