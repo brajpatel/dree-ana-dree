@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    height: 100vh;
+    color: #ededed;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+body.start-bg {
+    background: url('./assets/start-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+body.end-bg {
+    background: url('./assets/end-bg.png') no-repeat center;
+    background-size: cover;
+}
+
+body.animate-body-start {
+    animation: addStartBg 3s linear forwards;
+}
+
+@keyframes addStartBg {
+    from {
+        background: #121212;
+    }
+
+    to {
+        background: url('./assets/start-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+body.animate-body-end {
+    animation: addEndBg 3s linear forwards;
+}
+
+@keyframes addEndBg {
+    from {
+        background: #121212;
+    }
+
+    to {
+        background: url('./assets/end-bg.png') no-repeat center;
+        background-size: cover;
+    }
+}
+
+body.remove-bg {
+    animation: removeBg 4s linear forwards;
+}
+
+@keyframes removeBg {
+    from {
+        background: url('./assets/start-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    to {
+        background: #121212;
+    }
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 4px 0px rgb(64, 85, 168);
+    top: -2px;
+    transition: 0.3s;
+}
+
+button:active {
+    top: 0;
+    box-shadow: 0 2px 0px rgb(64, 85, 168);
+}
+
+span {
+    border-top: 1px solid black;
+    padding-top: 0.2rem;
+}
+
+#restart-btn {
+    display: none;
+}
+
+.small,
+.large {
+    background: #ededed;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: url('./assets/img.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    display: none;
+}
+
+.small {
+    height: 30vh;
+    width: 30vh;
+}
+
+.small.first {
+    top: 25%;
+    left: 22%;
+}
+
+.small.second {
+    top: 25%;
+    left: 78%;
+}
+
+.small.third {
+    top: 75%;
+    left: 22%;
+}
+
+.small.fourth {
+    top: 75%;
+    left: 78%;
+}
+
+.large {
+    height: 42vh;
+    width: 42vh;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+
+.hide {
+    animation: hide 3s linear forwards;
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.fadeIn {
+    display: block;
+    animation: fadeIn 4s linear forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.small.animate {
+    animation: smallCard 13s ease forwards;
+}
+
+@keyframes smallCard {
+    0%,
+    7.5%,
+    10.25%,
+    13%,
+    22%,
+    24.75%,
+    27.5%,
+    37.5%,
+    40.25%,
+    43%,
+    52%,
+    54.75%,
+    57.5%,
+    66%,
+    68.75%,
+    71.5%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    8.95%,
+    11.95%,
+    23.45%,
+    26.5%,
+    38.95%,
+    41.95%,
+    53.45%,
+    56.55%,
+    67.45%,
+    70.55% {
+        transform: translate(-50%, -60%);
+    }
+}
+
+.large.animate {
+    transform-origin: center;
+    animation: largeCard 13s forwards;
+}
+
+@keyframes largeCard {
+    0%,
+    1% {
+        transform: translate(-50%, -50%);
+    }
+
+    4.5% {
+        transform: translate(-50%, -65%);
+    }
+
+    6% {
+        transform: translate(-50%, -50%);
+    }
+
+    8%,
+    10% {
+        transform: translate(-50%, -80%);
+    }
+
+    15%,
+    18% {
+        transform: translate(-50%, -50%) rotateY(0);
+    }
+
+    22% {
+        transform: translate(-50%, -50%) rotateY(-180deg);
+    }
+
+    26% {
+        transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotateX(180deg) rotateY(180deg);
+    }
+
+    34% {
+        transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+    }
+
+    38% {
+        transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+        border-radius: 0;
+    }
+
+    42% {
+        transform: translate(-50%, -50%) rotateX(45deg) rotateY(-180deg);
+        border-radius: 50%;
+    }
+
+    46% {
+        transform: translate(-50%, -50%) rotateX(-90deg) rotateY(90deg);
+        border-radius: 50%;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+        border-radius: 50%;
+    }
+
+    54% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        border-radius: 0;
+    }
+
+    58% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+        border-radius: 50%;
+    }
+
+    62% {
+        transform: translate(-50%, -50%) rotate(0) scale(1);
+        border-radius: 0;
+    }
+
+    63% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    64% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    65% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    66% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    67.45% {
+        transform: translate(-50%, -60%);
+    }
+
+    68.75% {
+        transform: translate(-50%, -50%);
+    }
+
+    70.55% {
+        transform: translate(-50%, -60%);
+    }
+
+    71.5% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    73% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    74.5% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    76% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    78% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    79% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    81.5% {
+        transform: translate(-50%, -60%);
+    }
+
+    83% {
+        transform: translate(-40%, -60%);
+    }
+
+    84.5% {
+        transform: translate(-50%, -60%);
+    }
+
+    87.5% {
+        transform: translate(-65%, -60%);
+    }
+
+    90% {
+        transform: translate(-65%, -50%);
+    }
+
+    93.5% {
+        transform: translate(-50%, -50%);
+    }
+
+    96% {   
+        transform: translate(-50%, -70%);
+    }
+
+    97% {
+        transform: translate(-50%, -50%);
+    }
+
+    99% {
+        transform: translate(-50%, -130%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -130%) scale(4);
+    }
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #121212;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 4rem;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    height: 418px;
+    width: 304px;
+    border: 1px solid #010101;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.first {
+    background: url('./assets/thumbnail-1.png') no-repeat center;
+}
+
+.first:hover {
+    border: 1px solid rgb(123, 199, 222);
+}
+
+.second {
+    background: url('./assets/thumbnail-2.png') no-repeat;
+    background-position: 20%;
+}
+
+.second:hover {
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.first,
+.second {
+    background-size: cover;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.first::after {
+    background: linear-gradient(0deg, rgb(8, 39, 49) 5%,rgba(8, 39, 49, 0.4) 30%,rgba(8, 39, 49, 0) 70%),linear-gradient(35deg,rgb(8, 39, 49) 10%,rgba(8, 39, 49, 0) 40%);
+}
+
+.second::after {
+    background: linear-gradient(0deg, rgba(100, 100, 100) 5%,rgba(100, 100, 100, 0.4) 30%,rgba(100, 100, 100, 0) 70%),linear-gradient(35deg,rgb(100, 100, 100) 10%,rgba(100, 100, 100, 0) 40%);
+}
+
+h3 {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+}
