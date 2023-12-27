@@ -83,7 +83,7 @@ h1 {
 }
 
 .third::after {
-    background: linear-gradient(0deg, rgb(87, 136, 110) 5%,rgba(87, 136, 110, 0.4) 30%,rgba(87, 136, 110, 0) 70%),linear-gradient(35deg,rgb(87, 136, 110) 10%,rgba(87, 136, 110, 0) 40%);
+    background: linear-gradient(0deg, rgb(96, 208, 148) 5%,rgba(96, 208, 148, 0.4) 30%,rgba(96, 208, 148, 0) 70%),linear-gradient(35deg,rgb(96, 208, 148) 10%,rgba(96, 208, 148, 0) 40%);
 }
 
 h3 {
