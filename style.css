@@ -28,15 +28,6 @@ h1 {
     gap: 2rem;
 }
 
-.card {
-    height: 418px;
-    width: 304px;
-    border: 1px solid #010101;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
 .first {
     background: url('./assets/thumbnail-1.png') no-repeat center;
 }
@@ -54,10 +45,25 @@ h1 {
     border: 1px solid rgb(211, 211, 211);
 }
 
-.first,
-.second {
-    background-size: cover;
+.third {
+    background: url('./assets/thumbnail-3.jpg') no-repeat;
+    background-position: 20%;
 }
+
+.third:hover {
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.card {
+    height: 418px;
+    width: 304px;
+    background-size: cover;
+    border: 1px solid #010101;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
 
 .card::after {
     content: "";
@@ -74,6 +80,10 @@ h1 {
 
 .second::after {
     background: linear-gradient(0deg, rgba(100, 100, 100) 5%,rgba(100, 100, 100, 0.4) 30%,rgba(100, 100, 100, 0) 70%),linear-gradient(35deg,rgb(100, 100, 100) 10%,rgba(100, 100, 100, 0) 40%);
+}
+
+.third::after {
+    background: linear-gradient(0deg, rgb(87, 136, 110) 5%,rgba(87, 136, 110, 0.4) 30%,rgba(87, 136, 110, 0) 70%),linear-gradient(35deg,rgb(87, 136, 110) 10%,rgba(87, 136, 110, 0) 40%);
 }
 
 h3 {
