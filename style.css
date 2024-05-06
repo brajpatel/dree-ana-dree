@@ -54,6 +54,15 @@ h1 {
     border: 1px solid rgb(68, 198, 128);
 }
 
+.fourth {
+    background: url('./assets/thumbnail-4.png') no-repeat;
+    background-position: 20%;
+}
+
+.fourth:hover {
+    border: 1px solid rgb(211, 211, 211);
+}
+
 .card {
     height: 418px;
     width: 304px;
