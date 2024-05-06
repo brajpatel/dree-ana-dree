@@ -95,6 +95,10 @@ h1 {
     background: linear-gradient(0deg, rgb(96, 208, 148) 5%,rgba(96, 208, 148, 0.4) 30%,rgba(96, 208, 148, 0) 70%),linear-gradient(35deg,rgb(96, 208, 148) 10%,rgba(96, 208, 148, 0) 40%);
 }
 
+.fourth::after {
+    background: linear-gradient(0deg, rgb(41, 41, 41) 5%,rgba(41, 41, 41, 0.4) 30%,rgba(41, 41, 41, 0) 70%),linear-gradient(35deg,rgb(41, 41, 41) 10%,rgba(41, 41, 41, 0) 40%);
+}
+
 h3 {
     color: white;
     position: absolute;
