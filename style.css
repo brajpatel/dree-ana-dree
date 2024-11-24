@@ -51,12 +51,12 @@ h1 {
 }
 
 .third:hover {
-    border: 1px solid rgb(68, 198, 128);
+    border: 1px solid rgb(104, 236, 43);
 }
 
 .fourth {
-    background: url('./assets/thumbnail-4.png') no-repeat;
-    background-position: 20%;
+    background: url('./assets/thumbnail-4.jpg') no-repeat;
+    background-position: 70%;
 }
 
 .fourth:hover {
@@ -92,7 +92,7 @@ h1 {
 }
 
 .third::after {
-    background: linear-gradient(0deg, rgb(96, 208, 148) 5%,rgba(96, 208, 148, 0.4) 30%,rgba(96, 208, 148, 0) 70%),linear-gradient(35deg,rgb(96, 208, 148) 10%,rgba(96, 208, 148, 0) 40%);
+    background: linear-gradient(0deg, rgb(113, 223, 61) 5%,rgba(113, 223, 61, 0.4) 30%,rgba(113, 223, 61, 0) 70%),linear-gradient(35deg,rgb(113, 223, 61) 10%,rgba(113, 223, 61, 0) 40%);
 }
 
 .fourth::after {
