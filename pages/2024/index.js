@@ -44,7 +44,7 @@ const sequenceButton = document.querySelector('.sequence-button');
 sequenceButton.addEventListener('click', playSequence);
 
 function adjustBall() {
-    if (ballCount === 40) {
+    if (ballCount === 10) {
         ball.classList.add('button');
         ball.textContent = 'Click to chlay';
 
